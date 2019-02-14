@@ -8,8 +8,9 @@
   "scripts": {
     "commit": "git-cz",
     "release": "standard-version",
-    "push": "git push --follow-tags origin master"
-  },
+    "push": "git push --follow-tags origin master",
+    "lint": "tslint -c tslint.json 'src/**/*.ts'"
+   },
   "devDependencies": {
     "@commitlint/cli": "7.5.2",
     "@commitlint/config-angular": "7.5.0",
@@ -17,7 +18,8 @@
     "@commitlint/prompt": "7.5.0",
     "commitizen": "3.0.5",
     "cz-conventional-changelog": "2.1.0",
-    "standard-version": "4.4.0"
+    "standard-version": "4.4.0",
+    "typescript": "3.3.3"
   },
   "config": {
     "commitizen": {
