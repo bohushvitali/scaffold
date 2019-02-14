@@ -1,0 +1,26 @@
+{
+  "name": "scaffold",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/bohushvitali/scaffold.git",
+  "author": "Vitali Bohush <bohushvitali@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "commit": "git-cz",
+    "release": "standard-version"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "7.5.2",
+    "@commitlint/config-angular": "7.5.0",
+    "@commitlint/config-conventional": "7.5.0",
+    "@commitlint/prompt": "7.5.0",
+    "commitizen": "3.0.5",
+    "cz-conventional-changelog": "2.1.0",
+    "standard-version": "4.4.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/prompt"
+    }
+  }
+}
