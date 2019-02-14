@@ -7,7 +7,8 @@
   "license": "MIT",
   "scripts": {
     "commit": "git-cz",
-    "release": "standard-version"
+    "release": "standard-version",
+    "lint": "tslint -c tslint.json 'src/**/*.ts'"
   },
   "devDependencies": {
     "@commitlint/cli": "7.5.2",
