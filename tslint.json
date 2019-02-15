@@ -1,6 +1,6 @@
 {
     "defaultSeverity": "error",
-    "extends": "gts/tslint.json",
+    "extends": [],
     "jsRules": {},
     "rules": {},
     "rulesDirectory": []

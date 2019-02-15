@@ -1,15 +1,17 @@
 const webpack = require('webpack');
 const path = require('path');
 
+const APP_DIR = path.resolve(__dirname, "./src/");
+
 module.exports = {
-	entry: './src/index.ts',
+
+	entry: path.join(APP_DIR, 'index.ts'),
 
 	module: {
 		rules: [
 			{
-				include: [path.resolve(__dirname, 'src')],
-				loader: 'ts-loader',
 				test: /\.tsx?$/,
+				loader: "ts-loader",
 				exclude: /node_modules/
 			},
 			{
