@@ -1,6 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-class Rocket {
+export class Rocket {
     constructor() {
         this.isInSpace = false;
         this.boostersLanded = true;
@@ -10,5 +8,4 @@ class Rocket {
         this.boostersLanded = true;
     }
 }
-exports.Rocket = Rocket;
 //# sourceMappingURL=rocket.js.map

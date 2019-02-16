@@ -1,11 +1,11 @@
 export class BankAccount {
-  balance = 0;
+  public balance: number = 0
 
-  deposit(amount: number) {
-    this.balance += amount;
+  public deposit(amount: number) {
+    this.balance += amount
   }
 
-  withdraw(amount: number) {
-    this.balance -= amount;
+  public withdraw(amount: number) {
+    this.balance -= amount
   }
 }

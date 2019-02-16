@@ -1,6 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-class TodoList {
+export class TodoList {
     constructor() {
         this.items = [];
     }
@@ -18,5 +16,4 @@ class TodoList {
         }
     }
 }
-exports.TodoList = TodoList;
 //# sourceMappingURL=todo-list.js.map

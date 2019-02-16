@@ -1,11 +1,9 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 const itemPrices = {
+    'An idea to replace EVERYTHING with blockchains': 0,
     'Autographed Neil deGrasse Tyson book': 100,
     'Rick Astley t-shirt': 22,
-    'An idea to replace EVERYTHING with blockchains': 0,
 };
-class OnlineSales {
+export class OnlineSales {
     constructor() {
         this.listedItems = [];
     }
@@ -23,5 +21,4 @@ class OnlineSales {
         }
     }
 }
-exports.OnlineSales = OnlineSales;
 //# sourceMappingURL=online-sales.js.map

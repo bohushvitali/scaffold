@@ -1,0 +1,40 @@
+import { defineFeature, loadFeature } from 'jest-cucumber'
+
+import { TodoList } from '../todo-list'
+
+const feature = loadFeature('./src/__tests__/using-gherkin-tables.feature')
+
+defineFeature(feature, test => {
+  let todoList: TodoList
+
+  beforeEach(() => {
+    todoList = new TodoList()
+  })
+
+  test('Adding an item to my todo list', ({ given, when, then }) => {
+    given('my todo list currently looks as follows:', (table: any[]) => {
+      table.forEach((row: any) => {
+        todoList.add({
+          name: row.TaskName,
+          priority: row.Priority,
+        })
+      })
+    })
+
+    when('I add the following task:', (table: any) => {
+      todoList.add({
+        name: table[0].TaskName,
+        priority: table[0].Priority,
+      })
+    })
+
+    then('I should see the following todo list:', (table: any[]) => {
+      expect(todoList.items.length).toBe(table.length)
+
+      table.forEach((_, index) => {
+        expect(todoList.items[index].name).toBe(table[index].TaskName)
+        expect(todoList.items[index].priority).toBe(table[index].Priority)
+      })
+    })
+  })
+})
