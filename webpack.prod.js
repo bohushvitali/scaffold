@@ -1,62 +1,39 @@
-const webpack = require('webpack');
-const path = require('path');
+const webpack = require('webpack')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const merge = require('webpack-merge')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const baseConfig = require('./webpack.base.js')
 
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+module.exports = merge(baseConfig, {
+  mode: 'production',
 
-const APP_DIR = path.resolve(__dirname, "./src/");
+  output: {
+    chunkFilename: '[name].[chunkhash].js',
+    filename: '[name].[chunkhash].js',
+  },
 
-module.exports = {
-	entry: path.join(APP_DIR, 'index.ts'),
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        vendors: {
+          priority: -10,
+          test: /[\\/]node_modules[\\/]/,
+        },
+      },
 
-	module: {
-		rules: [
-			{
-				test: /\.tsx?$/,
-				loader: "ts-loader",
-				exclude: /node_modules/
-			},
-			{
-				test: /\.(scss|css)$/,
+      chunks: 'async',
+      minChunks: 1,
+      minSize: 30000,
+      name: true,
+    },
+  },
 
-				use: [
-					{
-						loader: 'style-loader'
-					},
-					{
-						loader: 'css-loader'
-					},
-					{
-						loader: 'sass-loader'
-					}
-				]
-			}
-		]
-	},
-
-	resolve: {
-		extensions: ['.tsx', '.ts', '.js']
-	},
-
-	output: {
-		chunkFilename: '[name].[chunkhash].js',
-		filename: '[name].[chunkhash].js'
-	},
-
-	mode: 'production',
-
-	optimization: {
-		splitChunks: {
-			cacheGroups: {
-				vendors: {
-					priority: -10,
-					test: /[\\/]node_modules[\\/]/
-				}
-			},
-
-			chunks: 'async',
-			minChunks: 1,
-			minSize: 30000,
-			name: true
-		}
-	}
-};
+  plugins: [
+    // Minify JS
+    new UglifyJsPlugin(),
+    // Minify CSS
+    new webpack.LoaderOptionsPlugin({
+      minimize: true,
+    }),
+  ],
+})

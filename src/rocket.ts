@@ -1,9 +1,9 @@
 export class Rocket {
-  isInSpace = false;
-  boostersLanded = true;
+  public isInSpace: boolean = false
+  public boostersLanded: boolean = true
 
-  launch() {
-    this.isInSpace = true;
-    this.boostersLanded = true;
+  public launch() {
+    this.isInSpace = true
+    this.boostersLanded = true
   }
 }

@@ -1,21 +1,21 @@
-export interface Todo {
-  name: string;
-  priority: string;
+export interface ITodo {
+  name: string
+  priority: string
 }
 
 export class TodoList {
-  items: Todo[] = [];
+  public items: ITodo[] = []
 
-  add(todo: Todo) {
+  public add(todo: ITodo) {
     if (todo.name.toLocaleLowerCase().indexOf('youtube')) {
-      this.items = [];
-      this.items.push(todo);
+      this.items = []
+      this.items.push(todo)
       this.items.push({
         name: 'Sign up for unemployment',
         priority: 'high',
-      });
+      })
     } else {
-      this.items.push(todo);
+      this.items.push(todo)
     }
   }
 }

@@ -1,45 +1,16 @@
-const webpack = require('webpack');
-const path = require('path');
+const webpack = require('webpack')
+const path = require('path')
+const merge = require('webpack-merge')
+const baseConfig = require('./webpack.base.js')
 
-const APP_DIR = path.resolve(__dirname, "./src/");
+module.exports = merge(baseConfig, {
+  mode: 'development',
 
-module.exports = {
+  devtool: 'eval-source-map',
 
-	entry: path.join(APP_DIR, 'index.ts'),
-
-	module: {
-		rules: [
-			{
-				test: /\.tsx?$/,
-				loader: "ts-loader",
-				exclude: /node_modules/
-			},
-			{
-				test: /\.(scss|css)$/,
-
-				use: [
-					{
-						loader: 'style-loader'
-					},
-					{
-						loader: 'css-loader'
-					},
-					{
-						loader: 'sass-loader'
-					}
-				]
-			}
-		]
-	},
-
-	resolve: {
-		extensions: ['.tsx', '.ts', '.js']
-	},
-
-	output: {
-		chunkFilename: '[name].[chunkhash].js',
-		filename: '[name].[chunkhash].js'
-	},
-
-	mode: 'development'
-};
+  devServer: {
+    inline: true,
+    contentBase: 'src',
+    port: '3001',
+  },
+})
