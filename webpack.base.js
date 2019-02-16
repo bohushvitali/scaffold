@@ -12,10 +12,13 @@ module.exports = {
         loader: 'ts-loader',
         exclude: /node_modules/,
       },
-
+      {
+        test: /\.wasm$/,
+        loader: 'file-loader',
+        type: 'javascript/auto',
+      },
       {
         test: /\.(scss|css)$/,
-
         use: [
           {
             loader: 'style-loader',

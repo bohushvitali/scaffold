@@ -10318,19 +10318,6 @@ sort-keys@^2.0.0:
   dependencies:
     is-plain-obj "^1.0.0"
 
-sort-object-keys@^1.1.2:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/sort-object-keys/-/sort-object-keys-1.1.2.tgz#d3a6c48dc2ac97e6bc94367696e03f6d09d37952"
-  integrity sha1-06bEjcKsl+a8lDZ2luA/bQnTeVI=
-
-sort-package-json@1.19.0:
-  version "1.19.0"
-  resolved "https://registry.yarnpkg.com/sort-package-json/-/sort-package-json-1.19.0.tgz#3e6819147d75680832890523e753b8992166a442"
-  integrity sha512-SRzbsvOG+g8jTuFYZCvljh+LOsNeCS04bH+MF6qf0Ukva0Eh3Y6Jf7a4GSNEeDHLHM6CWqhZuJo7OLdzycTH1A==
-  dependencies:
-    detect-indent "^5.0.0"
-    sort-object-keys "^1.1.2"
-
 source-list-map@^2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/source-list-map/-/source-list-map-2.0.1.tgz#3993bd873bfc48479cca9ea3a547835c7c154b34"

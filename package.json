@@ -89,7 +89,6 @@
     "puppeteer": "1.12.2",
     "rimraf": "2.6.3",
     "sass-loader": "7.1.0",
-    "sort-package-json": "1.19.0",
     "standard-version": "5.0.0",
     "style-loader": "0.23.1",
     "ts-jest": "23.10.5",
