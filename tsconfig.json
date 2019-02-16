@@ -12,7 +12,13 @@
     "importHelpers": true,
     "inlineSourceMap": false,
     "inlineSources": false,
-    "lib": ["esnext", "es2018", "es2017", "es2016", "dom"],
+    "lib": [
+      "esnext",
+      "es2018",
+      "es2017",
+      "es2016",
+      "dom"
+    ],
     "listFiles": false,
     "module": "esnext",
     "moduleResolution": "node",
@@ -35,6 +41,11 @@
     "strictNullChecks": true,
     "target": "esnext"
   },
-  "exclude": ["node_modules"],
-  "include": ["src/**/*"]
+  "exclude": [
+    "node_modules"
+  ],
+  "include": [
+    "src/**/*",
+    "types.d.ts"
+  ]
 }
