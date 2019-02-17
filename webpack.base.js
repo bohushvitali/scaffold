@@ -1,6 +1,5 @@
 const webpack = require('webpack')
 const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: path.join(__dirname, 'src', 'index.ts'),
@@ -35,10 +34,5 @@ module.exports = {
     extensions: ['.tsx', '.ts', '.js', '.wasm'],
   },
 
-  plugins: [
-    new webpack.EnvironmentPlugin(['NODE_ENV']),
-    new HtmlWebpackPlugin({
-      title: 'Demo Application',
-    }),
-  ],
+  plugins: [new webpack.EnvironmentPlugin(['NODE_ENV'])],
 }

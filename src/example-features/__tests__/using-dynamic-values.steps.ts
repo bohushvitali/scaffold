@@ -2,7 +2,9 @@ import { defineFeature, loadFeature } from 'jest-cucumber'
 
 import { BankAccount } from '../bank-account'
 
-const feature = loadFeature('./src/__tests__/using-dynamic-values.feature')
+const feature = loadFeature(
+  './src/example-features/__tests__/using-dynamic-values.feature',
+)
 
 defineFeature(feature, test => {
   let myAccount: BankAccount

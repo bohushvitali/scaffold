@@ -2,7 +2,9 @@ import { defineFeature, loadFeature } from 'jest-cucumber'
 
 import { Rocket } from '../rocket'
 
-const feature = loadFeature('./src/__tests__/basic-scenarios.feature')
+const feature = loadFeature(
+  './src/example-features/__tests__/basic-scenarios.feature',
+)
 
 defineFeature(feature, test => {
   test('Launching a SpaceX rocket', ({ given, when, then }) => {

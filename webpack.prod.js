@@ -1,15 +1,15 @@
 const webpack = require('webpack')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const merge = require('webpack-merge')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const baseConfig = require('./webpack.base.js')
+const path = require('path')
 
 module.exports = merge(baseConfig, {
   mode: 'production',
 
   output: {
-    chunkFilename: '[name].[chunkhash].js',
-    filename: '[name].[chunkhash].js',
+    path: path.resolve(__dirname, 'public'),
+    filename: 'bundle.js',
   },
 
   optimization: {
