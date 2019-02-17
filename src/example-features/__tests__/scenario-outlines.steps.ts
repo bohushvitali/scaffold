@@ -2,7 +2,9 @@ import { defineFeature, loadFeature } from 'jest-cucumber'
 
 import { OnlineSales } from '../online-sales'
 
-const feature = loadFeature('./src/__tests__/scenario-outlines.feature')
+const feature = loadFeature(
+  './src/example-features/__tests__/scenario-outlines.feature',
+)
 
 defineFeature(feature, test => {
   let onlineSales: OnlineSales

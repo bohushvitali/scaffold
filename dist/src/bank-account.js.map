@@ -1,1 +1,0 @@
-{"version":3,"file":"bank-account.js","sourceRoot":"","sources":["../../src/bank-account.ts"],"names":[],"mappings":"AAAA,MAAM,OAAO,WAAW;IAAxB;QACS,YAAO,GAAW,CAAC,CAAA;IAS5B,CAAC;IAPQ,OAAO,CAAC,MAAc;QAC3B,IAAI,CAAC,OAAO,IAAI,MAAM,CAAA;IACxB,CAAC;IAEM,QAAQ,CAAC,MAAc;QAC5B,IAAI,CAAC,OAAO,IAAI,MAAM,CAAA;IACxB,CAAC;CACF"}

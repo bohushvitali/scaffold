@@ -6,6 +6,10 @@
     "tslint-plugin-prettier"
   ],
   "jsRules": {},
-  "rules": {},
+  "rules": {
+    "no-unused-variable": false,
+    "no-unused-expression": false,
+    "no-console": false
+  },
   "rulesDirectory": []
 }

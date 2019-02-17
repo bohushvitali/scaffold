@@ -1,1 +1,0 @@
-{"version":3,"file":"rocket.js","sourceRoot":"","sources":["../../src/rocket.ts"],"names":[],"mappings":"AAAA,MAAM,OAAO,MAAM;IAAnB;QACS,cAAS,GAAY,KAAK,CAAA;QAC1B,mBAAc,GAAY,IAAI,CAAA;IAMvC,CAAC;IAJQ,MAAM;QACX,IAAI,CAAC,SAAS,GAAG,IAAI,CAAA;QACrB,IAAI,CAAC,cAAc,GAAG,IAAI,CAAA;IAC5B,CAAC;CACF"}
