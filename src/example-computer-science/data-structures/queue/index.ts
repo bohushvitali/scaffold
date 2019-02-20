@@ -1,0 +1,27 @@
+/** Class representing a Queue. */
+
+class Queue {
+  storage: any
+
+  constructor() {
+    this.storage = {}
+  }
+  /*
+   * Enqueues a new value at the end
+   * of the queue
+   * @param {*} value - the value to
+   * enqueue
+   */
+  enqueue() {}
+
+  /*
+   * Dequeues the value from the beginning of the queue and returns it
+   * @return {*} the first and oldest value in the queue
+   */
+  dequeue() {}
+  /*
+   * Returns the value at the beginning of the queue without removing it from the queue
+   * @return {*} value the first and oldest value in the queue
+   */
+  peek() {}
+}

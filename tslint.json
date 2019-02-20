@@ -9,7 +9,11 @@
   "rules": {
     "no-unused-variable": false,
     "no-unused-expression": false,
-    "no-console": false
+    "no-console": false,
+    "noImplicitAny": false,
+    "member-access": false,
+    "no-empty": false,
+    "jsdoc-format": true
   },
   "rulesDirectory": []
 }
