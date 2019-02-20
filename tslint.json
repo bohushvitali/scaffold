@@ -13,7 +13,7 @@
     "noImplicitAny": false,
     "member-access": false,
     "no-empty": false,
-    "jsdoc-format": true
+    "jsdoc-format": false
   },
   "rulesDirectory": []
 }
