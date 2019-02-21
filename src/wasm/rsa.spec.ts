@@ -11,5 +11,4 @@ test('Generate rsa', () => {
   expect(keys).toHaveProperty('n')
   expect(keys).toHaveProperty('d')
   expect(keys).toHaveProperty('e')
-  console.log(keys)
 })

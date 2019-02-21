@@ -15,5 +15,8 @@
     "no-empty": false,
     "jsdoc-format": false
   },
-  "rulesDirectory": []
+  "rulesDirectory": [],
+  "linterOptions": {
+    "exclude": []
+  }
 }

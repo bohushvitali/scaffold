@@ -21,17 +21,17 @@ test('last, initial', () => {
 })
 
 test('curry', () => {
-  const add = (a: any) => (b: any) => a + b
+  const add = a => b => a + b
   const add2 = add(2)
 
   expect(add2(1)).toEqual(3)
-  expect(add2.length).toEqual(1)
-  expect(add2.toString()).toEqual('b => a + b')
+
+  // expect(add2.length).toEqual(1)
 })
 
 test('partials', () => {
-  const greet = (greeting: string, name: string) => `${greeting} ${name}`
-  const sayHelloTo = (name: string) => greet('hello', name)
+  const greet = (greeting, name) => `${greeting} ${name}`
+  const sayHelloTo = name => greet('hello', name)
 
   expect(sayHelloTo('fred')).toEqual('hello fred')
 })

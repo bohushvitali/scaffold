@@ -9,14 +9,9 @@
     "allowSyntheticDefaultImports": true,
     "pretty": true,
     "strictNullChecks": false,
+    "allowJs": true,
     "lib": ["es2017", "dom"]
   },
-  "include": [
-    "src/**/*.ts",
-    "types.d.ts"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist"
-  ]
+  "include": ["src/**/*.ts", "types.d.ts"],
+  "exclude": ["node_modules", "dist"]
 }
