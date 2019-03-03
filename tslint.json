@@ -6,17 +6,18 @@
     "tslint-plugin-prettier"
   ],
   "jsRules": {},
-  "rules": {
-    "no-unused-variable": false,
-    "no-unused-expression": false,
-    "no-console": false,
-    "noImplicitAny": false,
-    "member-access": false,
-    "no-empty": false,
-    "jsdoc-format": false
-  },
-  "rulesDirectory": [],
   "linterOptions": {
     "exclude": []
-  }
+  },
+  "rules": {
+    "jsdoc-format": false,
+    "member-access": false,
+    "no-console": false,
+    "no-empty": false,
+    "no-unused-expression": false,
+    "no-unused-variable": false,
+    "noImplicitAny": false,
+    "semicolon": [true, "always"]
+  },
+  "rulesDirectory": []
 }

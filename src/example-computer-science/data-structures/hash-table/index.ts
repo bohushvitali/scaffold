@@ -1,10 +1,10 @@
 /** Class representing a Hash Table */
 
 class HashTable {
-  storage: any
+  storage: any;
 
   constructor() {
-    this.storage = []
+    this.storage = [];
   }
   /*
    * Inserts a new key-value pair
@@ -32,11 +32,11 @@ class HashTable {
    * @return {number} - an integer between 0 and n
    */
   _hash(str: string, n: number) {
-    let sum = 0
+    let sum = 0;
     for (let i = 0; i < str.length; i++) {
-      sum += str.charCodeAt(i) * 3
+      sum += str.charCodeAt(i) * 3;
     }
 
-    return sum % n
+    return sum % n;
   }
 }
